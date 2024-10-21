@@ -61,7 +61,7 @@ var $t=Object.defineProperty;var ft=(n,t,e)=>t in n?$t(n,t,{enumerable:!0,config
             height: auto;
         }
     `}class dt extends u{render(){return w`
-                <img src="../src/assets/lit.svg">
+                <img src="../vite.svg">
             `}}m(dt,"styles",zt());window.customElements.define("app-logo",dt);function jt(){return T`
         :host {
             position: sticky;
