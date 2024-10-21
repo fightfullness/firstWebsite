@@ -4,8 +4,7 @@ function style () {
     return css`
         div {
             background-color: grey;
-            height: 50vh;
-            width: 100vw;
+            height:80vh;
         }
     `;
 }
