@@ -1,6 +1,7 @@
 import { LitElement, html, css } from "lit";
 import "./app-navbar-btn";
 import "./app-logo";
+import "./app-socialmedia";
 
 function style () {
     return css`
@@ -40,6 +41,7 @@ export class Navbar extends LitElement {
                 <app-navbar-btn btntext="Rubrik"></app-navbar-btn>
                 <app-navbar-btn btntext="Rubrik 2"></app-navbar-btn>
             </div>
+            <app-socialmedia></app-socialmedia>
         </div>
         `;
     };
