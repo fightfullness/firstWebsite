@@ -1,5 +1,6 @@
 import { LitElement, html, css } from "lit";
-import '../components/heropicture.js';
+import './app-main-hero.js';
+import './app-main-texter.js';
 
 // const style = () => {
 //     return css`
@@ -9,15 +10,16 @@ import '../components/heropicture.js';
 //     `;
 // }
 
-export class AppContent extends LitElement {
+export class AppMain extends LitElement {
         // static styles = style ();
     
     render () {
         return html`
-             <app-heropicture>
+            <app-heropicture>
             </app-heropicture>
+            <app-main-texter sectionId="about"></app-main-texter>
             `;
     }
 }
 
-window.customElements.define('app-content', AppContent);
+window.customElements.define('app-main', AppMain);

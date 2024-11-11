@@ -1,4 +1,5 @@
 import { LitElement, html, css } from "lit";
+import imgUrl from "../src/assets/instagram-small-logo-invert.png";
 
 function style () {
     return css`
@@ -7,8 +8,14 @@ function style () {
             align-items: center;
             justify-content: center;
         }
-        img{
-            height: auto;
+
+        a {
+            height: inherit;
+        }
+
+        a img {
+            height: 100%;
+            width: auto;
         }
     `;
 }
@@ -16,9 +23,15 @@ function style () {
 export class Logo extends LitElement {
     static styles = style(); 
 
+    static properties = {
+        height: {Type: String}
+    }
+
     render() {
         return html`
-                <img src="../src/assets/lit.svg">
+                <a href="#">
+                    <img src=${imgUrl}>
+                </a>
             `;
     }
 }

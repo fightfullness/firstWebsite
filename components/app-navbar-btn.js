@@ -4,21 +4,24 @@ function style () {
     return css`
         a{
             text-decoration: none;
+            
         }
 
         .btn{
             display:flex;
             align-items: center;
-
+            
+            
             height: 100%;
-            color: grey;
+            color: var(--neutral);
             text-align: center;
             padding: 0 10px 0 10px;
+            opacity: 1.0;
         }
 
         .btn:hover {
-            background-color: black;
-            color: white;
+            background-color: var(--primary);
+            color: var(--secondary);
         }
     `;
 }
@@ -27,17 +30,17 @@ export class NavbarBtn extends LitElement {
     static styles = style();
 
     static properties = {
-        btntext: {type: String}
+        btntext: {type: String},
+        btnlink: {type: String}
     }
-    
 
     render () {
         return html`
-            <a href="#">
+            <a href="#${this.btnlink}">
                 <div class="btn">
                     ${this.btntext}
                 </div>
-            </a>
+            </a>   
         `;
     }
 }

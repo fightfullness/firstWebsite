@@ -1,0 +1,41 @@
+{
+    "aboutMe":{
+        "example":"Lorem Itsum badadum",
+        "heading":"About me",
+        "body": {
+            "1":"I'm Kristoffer Modig, the mental coach behind Fightfulness.",
+
+            "2":"For the past four years, I've dedicated myself to social work as a therapist in different areas, where I've had the privilege of connecting with people during their most pivotal moments. My passion lies in helping individuals gain perspective and create space to enhance their mental skills in every moment of life, both as an athlete and a human being.",
+
+            "3":"For years, I've observed how mental training can play a crucial role in martial arts. I've seen fighters struggle with the mental aspects of the sport, often getting trapped in negative thought patterns and losing sight of the peace of being a mental tough fighter.",
+
+            "4":"At Fightfulness, I meet my clients where they are, addressing the unique challenges their minds present. I utilize a range of mental techniques, analyses, and tools to help them better understand themselves—not just as fighters, but as individuals.",
+
+            "5":"With a background in competitive fighting, experience in the martial arts environment, and a Bachelor's degree in Sports Psychology, I bring together the key elements needed to elevate my clients' mental game."
+        }
+        
+    },
+    "mentalTraining":{
+        "example":"Lorem Itsum badadum",
+        "heading":"Mental Training",
+        "subheading": "Introducing Mental Training for fighters to boost mental health and elevate performance! 🥊🧠",
+        "body": {
+            "1":"📚🔎 I use CBT (Cognitive Behavioral Therapy) as a foundation to effectively create a motivational approach that's simple and educational for both me as a mental coach and you as an athlete. By building an understanding of thought, emotion, body, and action, you'll also gain insight into who you are and how you act as a fighter.",
+
+            "2":"❤️‍🩹🎖 Striking a balance between wealth and high performance isn't just a winning combination—it's essential for a sustainable, fulfilling career.",
+
+            "3":"🧠 Self-reflection strengthens our ability to understand ourselves and the world around us. Our actions, thoughts, and feelings reflect our reality. Recognizing and becoming aware of yourself is key to staying true to who you are and what you want."
+        }
+    },
+    "clientStories":{
+        "example":"Lorem Itsum badadum",
+        "heading":"Client Stories",
+        "body": {
+            "1":"Here is Natalia, a fighter with a big heart and tough mindset, pursuing a fight career with a mindset of clarity and resilience, ready for whatever it takes.🥊",
+
+            "2":"In general when we spar, we confront a range of emotions and thoughts, both of which shape our performance. 💭🪷",
+
+            "3":"Emotions fuel our focus, while thoughts guide our strategy. Without feeling, we can't sharpen our awareness, and without clear thinking, we can't execute our best performance. 🌟"
+        }
+    }
+}

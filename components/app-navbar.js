@@ -8,22 +8,29 @@ function style () {
         :host {
             position: sticky;
             top: 0px;
+            z-index: 10; // Highest level
             /* width: 90vw; */
         }
 
         .navbar {
             display: flex;
             justify-content: space-between;
+            align-items: center;
 
             height: 70px;
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.7);
             padding: 0 50px 0 50px;
         }
 
         .btndiv {
             display: flex;
+            height: inherit;
             gap: 50px;
             justify-content: space-between;
+        }
+
+        .logo {
+            height: 80%;
         }
     `;
 }
@@ -34,12 +41,13 @@ export class Navbar extends LitElement {
     render () {
         return html`
         <div class="navbar">
-            <app-logo></app-logo>
+            <app-logo class="logo"></app-logo>
             <div class="btndiv">
-                <app-navbar-btn btntext="Startsida"></app-navbar-btn>
-                <app-navbar-btn btntext="Om oss"></app-navbar-btn>
-                <app-navbar-btn btntext="Rubrik"></app-navbar-btn>
-                <app-navbar-btn btntext="Rubrik 2"></app-navbar-btn>
+                <app-navbar-btn btntext="About me" btnlink="about"></app-navbar-btn>
+                <app-navbar-btn btntext="Mental Training" btnlink="mentalTraining" ></app-navbar-btn>
+                <app-navbar-btn btntext="Client Stories" btnlink="clientStories"></app-navbar-btn>
+                <app-navbar-btn btntext="Book a Session" btnlink="bookSession"></app-navbar-btn>
+                <app-navbar-btn btntext="For clubs" btnlink="forClubs"></app-navbar-btn>
             </div>
             <app-socialmedia></app-socialmedia>
         </div>
