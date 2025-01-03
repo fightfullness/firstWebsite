@@ -1,5 +1,5 @@
 import { LitElement, html, css } from "lit";
-import imgUrl from "../src/assets/instagram-small-logo-invert.png";
+import imgUrl from "../src/assets/wix-full-logo.webp";
 
 function style () {
     return css`
@@ -7,6 +7,7 @@ function style () {
             display: flex;
             align-items: center;
             justify-content: center;
+            height: 100%;
         }
 
         a {
@@ -14,7 +15,7 @@ function style () {
         }
 
         a img {
-            height: 100%;
+            height: calc(100% - 10px);
             width: auto;
         }
     `;

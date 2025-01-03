@@ -12,7 +12,7 @@ import './app-main-texter.js';
 
 export class AppMain extends LitElement {
         // static styles = style ();
-    
+
     render () {
         return html`
             <app-heropicture>
@@ -22,4 +22,5 @@ export class AppMain extends LitElement {
     }
 }
 
-window.customElements.define('app-main', AppMain);
+    // DEPRICATED
+// window.customElements.define('app-main', AppMain);

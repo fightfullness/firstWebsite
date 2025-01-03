@@ -1,26 +1,62 @@
 import { LitElement, css, html } from "lit";
-import imgOne from "../src/assets/instagram-fighter-hero.webp";
-import imgTwo from "../src/assets/instagram-kneeling-hero.webp";
-import imgThree from "../src/assets/instagram-ringcorner-hero.webp";
+import slideImg from "../src/assets/hero-image-from-wix.webp";
 
 function style (){
     return css`
     :host {
-        display:flex;
+        display: flex;
         height: 100%;
         width: 100%;
         overflow: hidden;
         z-index: 1; // Lowest level
     }
-    .images {
-        opacity: 0.75;
-        margin: 10px 5px 10px 5px;
-        /* SHORTHAND : animation: name | duration | timing | direction    (some missing)*/
-        animation-duration: 10s;
-        animation-name: scroll;
-        animation-direction: alternate;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
+
+    .slider{
+        display: inline-block;
+        white-space: nowrap;
+        height: auto;
+    }
+
+    /* // ALT 1 : Gradient on each side
+
+    .slider:before, .slider:after {
+        position: absolute;
+        top: var(--navbar-height);
+        width: 30px;
+        height: calc(100% - var(--navbar-height));
+        content: "";
+        z-index: 3;
+    }
+
+    .slider:after {
+        background-image: linear-gradient(90deg, rgba(255, 255, 255, 0), var(--primary));
+        right: var(--wrapper-padding); 
+    }
+    .slider:before {
+        background-image: linear-gradient(270deg, rgba(255, 255, 255, 0), var(--primary));
+        left: var(--wrapper-padding); 
+    } */
+
+     /* // ALT 2 : Gradient in the bottom   
+
+    .slider:after {
+        position: absolute;
+        bottom: 0;
+        right: var(--wrapper-padding);
+        width: calc(100% - var(--wrapper-padding)*2);
+        height: calc(100% - var(--navbar-height));
+        background-image: linear-gradient(rgba(253, 252, 242, 0), rgba(253, 252, 242, 0.1), rgba(253, 252, 242, 0.5), var(--secondary), var(--secondary));
+        content: "";
+        z-index: 3;
+    } */
+
+        /* ALT 3 : Gradient on image, (to make buttons pop) */
+
+    .image {
+        height: 100%;
+        opacity: 0.5;
+        /* SHORTHAND : animation: name | duration | iteration | timing |    (some missing)*/
+        animation: scroll 60s infinite linear;
 
         transition: 700ms;
     }
@@ -34,7 +70,7 @@ function style (){
             transform: translateX(0);
         }
         to {
-            transform: translateX(calc(100vw - 300%));
+            transform: translateX(-100%);
         }
         
     }
@@ -46,9 +82,10 @@ export class HeroImageScroller extends LitElement {
 
     render(){
         return html`
-            <img src=${imgOne} class="images imgOne">
-            <img src=${imgTwo} class="images imgTwo">
-            <img src=${imgThree} class="images imgThree">
+        <div class="slider">
+            <img src=${slideImg} class="image">
+            <img src=${slideImg} class="image">
+        </div>
         `;
     }
 }

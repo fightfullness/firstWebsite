@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:wght@300&display=swap');
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Montserrat, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -40,7 +42,18 @@ html {
   --secondary90: #3B3B38;
   --secondary95: #2D2D2A;
 
-  --tertiary: #558C7C;
+  /* --tertiary: #558C7C;
+  --tertiary20: #4F8172;
+  --tertiary30: #487668;
+  --tertiary40: #416B5E;
+  --tertiary50: #385E53;
+  --tertiary60: #305247;
+  --tertiary70: #26433A;
+  --tertiary80: #1A342C;
+  --tertiary90: #09231C;
+  --tertiary95: #001912;
+  --tertiary99: #001109; */
+  --tertiary: rgb(153, 214, 172);
   --tertiary20: #4F8172;
   --tertiary30: #487668;
   --tertiary40: #416B5E;
@@ -66,17 +79,23 @@ html {
 
   --black: #000000;
   --white: #FFFFFF;
+
+  --content-width: 900px;
+  --wrapper-padding: 8px;
+
+  --navbar-height: 200px;
+  --navbar-btn-height: 50px;
 }
 
 body {
-  margin: 0 8px 8px 8px;
+  margin: 0 var(--wrapper-padding) var(--wrapper-padding) var(--wrapper-padding);
   min-height: 100vh;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color: var(--primary);
   }
 }
 

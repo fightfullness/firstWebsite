@@ -1,7 +1,7 @@
 import { LitElement, html, css } from "lit";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { fadeIn } from "./generalAnimations";
-import { addObserver } from "./helper";
+import { observerInview } from "./helper";
 import imgUrl from "../src/assets/krille-smaller.png";
 
 
@@ -11,12 +11,13 @@ function style () {
             display:flex;
             justify-content: center;
             align-items: center;
-            scroll-margin-top: 70px;
+            scroll-margin-top: var(--navbar-btn-height);
+            background-color: var(--secondary);
         }
         .wrapper {
             /* Old width */
             /* width: 760px; */
-            width: 900px;
+            width: var(--content-width);
             display:flex; 
             flex-direction: column;
             align-items: flex-start;
@@ -83,7 +84,7 @@ export class MainImageText extends LitElement {
 
     firstUpdated () {
         const element = this.shadowRoot.querySelector(".fade-in");
-        addObserver(element);
+        observerInview(element, "in-view");
     }
 
     render () {

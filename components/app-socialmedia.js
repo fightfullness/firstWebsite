@@ -3,7 +3,7 @@ import { LitElement, html, css } from "lit";
 function instaSvg () {
     return html`
         <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="-8 -8 116 116">
-            <rect class="svgStroke" width="100" height="100" x="0" y="0" rx="20" ry="20" fill="none" stroke="black" stroke-width="8" />
+            <rect class="svgStroke" width="100" height="100" x="0" y="0" rx="20" ry="20" fill="none" stroke-width="8" />
             <circle class="svgStroke" cx="50" cy="50" r="25" stroke="black" stroke-width="10" fill="none" />
             <circle class="svgBoth" cx="80" cy="20" r="4" stroke="black" stroke-width="8" fill="black" />
         </svg> 
@@ -22,16 +22,22 @@ function peachSvg () {
 
 function navbarStyle () {
     return css`
-        :host {
+        div {
             display: flex;
-            flex-direction: row;
             height: inherit;
-
+            
             justify-content: center;
             align-items: center;
             gap: 10px;
+            height: 100%;
         }
-
+        .row {
+            flex-direction: row;
+        }
+        .column {
+            flex-direction: column;
+        }
+        
         a {
             height: 100%;
             width: 50px;
@@ -41,7 +47,7 @@ function navbarStyle () {
         }
 
         a:hover {
-            background-color: var(--primary);
+            background-color: var(--secondary);
         }
 
         svg {
@@ -49,13 +55,22 @@ function navbarStyle () {
             height: 25px;
         }
 
-        a:hover .svgStroke {
+        .svgStroke {
             stroke: var(--secondary);
         }
 
-        a:hover .svgBoth {
+        .svgBoth {
             stroke: var(--secondary);
             fill: var(--secondary);
+        }
+
+        a:hover .svgStroke {
+            stroke: var(--primary);
+        }
+
+        a:hover .svgBoth {
+            stroke: var(--primary);
+            fill: var(--primary);
         }
     `;
 }
@@ -70,12 +85,14 @@ export class Socialmedia extends LitElement {
 
     render () {
         return html`
+        <div class=${this.footer ? "column" : "row"}>
             <a href="https://www.instagram.com/fightfulness/" target="_blank">
                 ${instaSvg()}
             </a>
             <a href="https://peach.nu/instructors/fightfulness" target="_blank">
                 ${peachSvg()}
             </a>
+        </div>
         `;
     }
 

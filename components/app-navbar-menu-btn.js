@@ -13,15 +13,18 @@ function style () {
             
             
             height: 100%;
-            color: var(--neutral);
+            /* color: var(--neutral); */
+            color: var(--secondary);
             text-align: center;
             padding: 0 10px 0 10px;
             opacity: 1.0;
         }
 
         .btn:hover {
-            background-color: var(--primary);
-            color: var(--secondary);
+            /* background-color: var(--primary);
+            color: var(--secondary); */
+            background-color: var(--secondary);
+            color: var(--primary);
         }
     `;
 }
@@ -45,4 +48,4 @@ export class NavbarBtn extends LitElement {
     }
 }
 
-window.customElements.define('app-navbar-btn', NavbarBtn);
+window.customElements.define('app-navbar-menu-btn', NavbarBtn);

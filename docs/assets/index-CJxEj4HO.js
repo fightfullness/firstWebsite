@@ -183,7 +183,7 @@ var _t=Object.defineProperty;var wt=(n,t,e)=>t in n?_t(n,t,{enumerable:!0,config
                     ${this.btntext}
                 </div>
             </a>   
-        `}}g(q,"styles",Gt()),g(q,"properties",{btntext:{type:String},btnlink:{type:String}});window.customElements.define("app-navbar-btn",q);const Jt="/assets/instagram-small-logo-invert-BOfGPrGW.png";function Xt(){return f`
+        `}}g(q,"styles",Gt()),g(q,"properties",{btntext:{type:String},btnlink:{type:String}});window.customElements.define("app-navbar-menu-btn",q);const Jt="/assets/instagram-small-logo-invert-BOfGPrGW.png";function Xt(){return f`
         :host {
             display: flex;
             align-items: center;
@@ -289,11 +289,11 @@ var _t=Object.defineProperty;var wt=(n,t,e)=>t in n?_t(n,t,{enumerable:!0,config
         <div class="navbar">
             <app-logo class="logo"></app-logo>
             <div class="btndiv">
-                <app-navbar-btn btntext="About me" btnlink="about"></app-navbar-btn>
-                <app-navbar-btn btntext="Mental Training" btnlink="mentalTraining" ></app-navbar-btn>
-                <app-navbar-btn btntext="Client Stories" btnlink="clientStories"></app-navbar-btn>
-                <app-navbar-btn btntext="Book a Session" btnlink="bookSession"></app-navbar-btn>
-                <app-navbar-btn btntext="For clubs" btnlink="forClubs"></app-navbar-btn>
+                <app-navbar-menu-btn btntext="About me" btnlink="about"></app-navbar-menu-btn>
+                <app-navbar-menu-btn btntext="Mental Training" btnlink="mentalTraining" ></app-navbar-menu-btn>
+                <app-navbar-menu-btn btntext="Client Stories" btnlink="clientStories"></app-navbar-menu-btn>
+                <app-navbar-menu-btn btntext="Book a Session" btnlink="bookSession"></app-navbar-menu-btn>
+                <app-navbar-menu-btn btntext="For clubs" btnlink="forClubs"></app-navbar-menu-btn>
             </div>
             <app-socialmedia></app-socialmedia>
         </div>

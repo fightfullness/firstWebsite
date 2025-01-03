@@ -1,20 +1,25 @@
 import { LitElement, html, css } from "lit";
 import "./app-main-hero-imagescroller";
+import "./app-main-hero-imagePopping";
+import { fadeInQuick } from "./generalAnimations";
+import { observerInview } from "./helper";
 
 function style () {
     return css`
         .hero {
             background-color: var(--primary90);
-            height:calc(100vh - 70px);
-            display:flex;
+            height:calc(100vh - var(--navbar-height)); /*900px, defined in index.css*/
+            display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
         }
         .btn-container{
+            display: flex;
             position: absolute;
-            z-index: 5; // Mid level
-            // IF HAVING A BORDER AROUND BTNS
+            z-index: 5; /* Mid level*/
+            opacity: 0;
+            /* IF HAVING A BORDER AROUND BTNS */
             /* height: 600px;
             width: 600px;
             display: flex;
@@ -45,16 +50,17 @@ function style () {
 }
 
 export class HeroPicture extends LitElement {
-    static styles = style();
+    static styles = [style(), fadeInQuick()]; // for Fade-in
     
     render(){
         return html`
             <div class="hero">
-                <div class="btn-container">
+                <div class="btn-container fade-in">
                     <button>For clubs</button>
                     <button>For fighters</button>
                 </div>
                 <app-hero-imagescroller></app-hero-imagescroller>
+                <!-- <app-hero-imagepopping></app-hero-imagepopping> -->
                 <!-- <div class="image-gallery">
                     <img src="../src/assets/instagram-fighter-hero.webp" class="imgOne">
                     <img src="../src/assets/instagram-kneeling-hero.webp" class="imgTwo">
@@ -62,6 +68,11 @@ export class HeroPicture extends LitElement {
                 </div> -->
             </div>
         `;
+    }
+
+    firstUpdated() {
+        //Make fade-in easier. Could use callback instead, so that function in component determine what will happen.
+        observerInview(this.shadowRoot.querySelector(".btn-container"), "in-view"); // for Fade-in
     }
 }
 

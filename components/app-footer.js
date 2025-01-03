@@ -8,7 +8,7 @@ function style () {
     return css`
         :host {
             display: flex;
-            background-color: var(--tertiary70);
+            background-color: var(--primary);
             padding: 20px;
             margin-top: 35px;
 
@@ -20,12 +20,15 @@ function style () {
             justify-content: space-between;
 
         }
-        .footer-card {
-            display: flex;
+        .footer-first {
             flex-direction: row;
             padding: 20px;
-            width: 70%;
+            width: 80%;
 
+        }
+        .footer-second {
+            display:inline-block;
+            width:20%;
         }
 
         h3 {
@@ -59,14 +62,12 @@ export class AppFooter extends LitElement {
 
     render () {
         return html`
-            <div class="footer-card">
+            <div class="footer-first">
                 <h3>fightfulness</h3>
             </div>
             <hr>
-            <div>
-                <div >
-                    <app-socialmedia footer></app-socialmedia>
-                </div>
+            <div class="footer-second">
+                <app-socialmedia footer></app-socialmedia>
             </div>
         `;
     }

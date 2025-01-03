@@ -29,3 +29,35 @@ export function fadeIn () {
 
     `;
 }
+
+export function fadeInQuick () {
+    return css`
+        /* SHORTHAND : animation: name | duration | timing | direction    (some missing)*/
+        .fade-in  {
+            animation-delay:1s;
+            animation-duration: 500ms;
+            animation-name: fade-in;
+            animation-direction: normal;
+            animation-timing-function: ease-out;
+            animation-iteration-count: 1;
+            animation-play-state: paused;
+            animation-fill-mode: forwards;
+        }
+        .in-view {
+            animation-play-state: running;
+        }
+
+        @keyframes fade-in {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1.0;
+            }
+            
+        }
+
+    `;
+}

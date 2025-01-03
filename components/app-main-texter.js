@@ -1,6 +1,6 @@
 import { LitElement, html, css } from "lit";
 import { fadeIn } from "./generalAnimations";
-import { addObserver } from "./helper";
+import { observerInview } from "./helper";
 
 function style () {
     return css`
@@ -8,10 +8,11 @@ function style () {
             display:flex;
             justify-content: center;
             align-items: center;
-            scroll-margin-top: 70px;
+            scroll-margin-top: var(--navbar-btn-height);
+            background-color: var(--secondary);
         }
         .text-placer {
-            width: 900px;
+            width: var(--content-width); /*900px, defined in index.css*/
         }
 
         h1{
@@ -21,7 +22,7 @@ function style () {
 };
 
 export class MainTexter extends LitElement {
-    static styles = [style(), fadeIn()];
+    static styles = [style(), fadeIn("in-view")];
 
     static properties = {
         content: {type: Object},
@@ -45,7 +46,7 @@ export class MainTexter extends LitElement {
 
     firstUpdated () {
         const element = this.shadowRoot.querySelector(".fade-in");
-        addObserver(element);
+        observerInview(element, "in-view");
     }
 
     render () {
